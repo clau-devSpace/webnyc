@@ -1,0 +1,214 @@
+.pageHeaderSection {
+    padding: 90px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pageHeaderSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.pageHeaderContent {
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2; 
+    animation: fadeInUp 1s ease-out;
+}
+
+.pageHeaderSection.withDoubleBg {
+    position: relative;
+}
+
+.headerBgLeft,
+.headerBgRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.headerBgLeft {
+    left: 0;
+}
+
+.headerBgRight {
+    right: 0;
+}
+
+.headerBgLeft::after,
+.headerBgRight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.pageHeaderSection.withDoubleBg .pageHeaderContent {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.pageHeaderSection.withDoubleBg .pageBreadcrumbNav a {
+    color: white;
+}
+
+.pageHeaderSection.withDoubleBg .pageBreadcrumbNav span {
+    color: rgba(255,255,255,0.8);
+}
+
+.pageHeaderSection.withDoubleBg h1 {
+    color: white;
+}
+
+.pageHeaderSection.withDoubleBg p {
+    color: rgba(255,255,255,0.9);
+}
+
+.pageBreadcrumbNav {
+    margin-bottom: 1rem;
+}
+
+.pageBreadcrumbNav a {
+    color: #ff6b35;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pageBreadcrumbNav a:hover {
+    color: #ff8c42;
+}
+
+.pageBreadcrumbNav span {
+    color: #666;
+    margin: 0 0.5rem;
+}
+
+.pageHeaderSection h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.pageHeaderSubtitle {
+    font-size: 1.5rem;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.pageHeaderSection p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.headerContacto {
+    background-size: cover;
+    background-position: center;
+}
+
+.headerInicio {
+    background-size: cover;
+    background-position: center top;
+}
+
+.headerServicios {
+    background-size: contain;
+    background-position: center;
+}
+
+.headerNosotros {
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .headerBgLeft,
+    .headerBgRight {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .headerBgLeft {
+        top: 0;
+        bottom: 50%;
+    }
+    
+    .headerBgRight {
+        top: 50%;
+        bottom: 0;
+    }
+    
+    .pageHeaderSection h1 {
+        font-size: 2.2rem;
+    }
+    
+    .headerContacto {
+        background-position: 50% center;
+    }
+    
+    .headerInicio {
+        background-position: center bottom;
+    }
+    
+    .headerServicios {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageHeaderSection h1 {
+        font-size: 1.8rem;
+    }
+    
+    .headerContacto {
+        background-position: 50% center;
+        background-size: cover;
+    }
+    
+    .headerInicio {
+        background-position: center bottom;
+    }
+}

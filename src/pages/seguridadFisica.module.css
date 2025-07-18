@@ -1,0 +1,373 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.serviceOverview {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.overviewContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.overviewText h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.overviewText p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.overviewFeatures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.featureItem.specificItem {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px;
+    align-items: start;
+}
+
+.featureIcon {
+    font-size: 1.2rem;
+}
+
+.featureText {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.overviewImage {
+    display: flex;
+    justify-content: center;
+}
+
+.imagenPersonal {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.servicesSection {
+    padding: 4rem 0 8rem 0;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.sectionTitle h3 {
+    font-size: 2.5rem;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.serviceContent h4{
+    font-size: 2.3rem;
+}
+
+.sectionTitle p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.servicesClean {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.serviceRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.serviceRow:nth-child(even) {
+    direction: rtl;
+}
+
+.serviceRow:nth-child(even) > * {
+    direction: ltr;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.serviceImage:hover {
+    transform: scale(1.02);
+}
+
+.serviceContent {
+    padding: 0;
+}
+
+.serviceContent h4 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.serviceDescription {
+    font-size: 1.1rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.serviceFeatures {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.serviceFeatures li {
+    color: #999;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.serviceFeatures li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+.serviceAdditional {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.totem {
+    height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.dron {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .overviewContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .overviewFeatures {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .serviceRow {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .serviceRow:nth-child(even) {
+        direction: ltr;
+    }
+
+    .serviceContent h4 {
+        font-size: 1.8rem;
+    }
+
+    .serviceImage {
+        height: 300px;
+    }
+
+    .servicesClean {
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .serviceOverview {
+        padding: 3rem 0;
+    }
+    
+    .servicesSection {
+        padding: 3rem 0 6rem 0;
+    }
+    
+    .overviewText h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .overviewText p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        text-align: center;
+    }
+    
+    .sectionTitle h3 {
+        font-size: 2.2rem;
+    }
+    
+    .sectionTitle p {
+        font-size: 1.1rem;
+    }
+    
+    .serviceRow {
+        text-align: center;
+    }
+    
+    .serviceContent h4 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .serviceDescription {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        text-align: center;
+    }
+    
+    .serviceFeatures {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .serviceFeatures li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .serviceAdditional {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    
+    .serviceImage {
+        height: 280px;
+    }
+    
+    .imagenPersonal {
+        height: 350px;
+    }
+    
+    .servicesClean {
+        gap: 4rem;
+    }
+    
+    .sectionTitle {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overviewText h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .overviewText p {
+        text-align: center;
+    }
+    
+    .serviceRow {
+        text-align: center;
+    }
+    
+    .serviceContent h4 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .serviceDescription {
+        text-align: center;
+    }
+
+    .serviceFeatures {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto 2rem auto;
+    }
+
+    .serviceAdditional {
+        text-align: center;
+    }
+
+    .serviceImage {
+        height: 250px;
+    }
+    
+    .imagenPersonal {
+        height: 300px;
+    }
+
+    .sectionTitle {
+        margin-bottom: 2rem;
+    }
+
+    .sectionTitle h3 {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+    }
+
+    .sectionTitle p {
+        font-size: 1.2rem;
+    }
+}
+
+.servicesGrid {
+    display: none;
+}

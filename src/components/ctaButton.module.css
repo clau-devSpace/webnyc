@@ -1,0 +1,133 @@
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  color: white;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+}
+
+.ctaButton:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.ctaButtonContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .ctaButtonContent {
+  transform: scale(1.05);
+}
+
+.ctaButtonOverlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.ctaButton:hover .ctaButtonOverlay {
+  left: 100%;
+}
+
+.ctaButtonIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.ctaSection {
+  background: #ffffff;
+  padding: 4rem 2rem; 
+  margin: 0; 
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ctaContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.ctaDescription {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 3rem 1rem; 
+  }
+  
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+  
+  .ctaDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .ctaButton {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaSection {
+    padding: 2.5rem 1rem; 
+  }
+  
+  .ctaTitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ctaDescription {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}

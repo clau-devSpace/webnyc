@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nycseguridad.com.ar/sitemap.xml
