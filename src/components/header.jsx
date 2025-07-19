@@ -1,24 +1,21 @@
+import Image from 'next/image';
 import styles from './header.module.css';
 
 function Header({ 
   title, 
   description,
-  backgroundImage1,
-  backgroundImage2,
-  backgroundImage, // Para usar una sola imagen
-  className
+  backgroundImage,
+  className,
+  // Props para Next Image
+  imageAlt = "Background image",
+  imagePriority = false,
+  imageQuality = 75
 }) {
   // Determinar qué clase CSS usar
   const getSectionClass = () => {
     let classes = [styles.pageHeaderSection];
     
-    if (backgroundImage1 && backgroundImage2) {
-      classes.push(styles.withDoubleBg);
-    }
-    
     if (className) {
-      // Si className es una clase de CSS Modules, usar directamente
-      // Si es una clase personalizada, agregarla tal como está
       if (styles[className]) {
         classes.push(styles[className]);
       } else {
@@ -29,46 +26,26 @@ function Header({
     return classes.join(' ');
   };
 
-  // Estilo SOLO para la imagen (sin backgroundSize, backgroundPosition, backgroundRepeat)
-  const singleImageStyle = backgroundImage ? {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${backgroundImage})`
-  } : {};
-
-  // Determinar si usar estilos de texto blanco (cuando hay imagen de fondo)
-  const hasBackgroundImage = backgroundImage || (backgroundImage1 && backgroundImage2);
-
   return (
-    <section 
-      className={getSectionClass()}
-      style={singleImageStyle}
-    >
-      {/* Renderizar las dos imágenes como elementos separados si están presentes */}
-      {backgroundImage1 && backgroundImage2 && (
-        <>
-          <div 
-            className={styles.headerBgLeft}
-            style={{ backgroundImage: `url(${backgroundImage1})` }}
-          />
-          <div 
-            className={styles.headerBgRight}
-            style={{ backgroundImage: `url(${backgroundImage2})` }}
-          />
-        </>
-      )}
+    <section className={getSectionClass()}>
+      
+      {/* Imagen de fondo usando Next Image */}
+      <div className={styles.imageContainer}>
+        <Image
+          src={backgroundImage}
+          alt={imageAlt}
+          fill
+          style={{ objectFit: 'cover' }}
+          priority={imagePriority}
+          quality={imageQuality}
+          className={`${styles.backgroundImage} ${className ? styles[className] || className : ''}`}
+        />
+        <div className={styles.overlay} />
+      </div>
       
       <div className={styles.pageHeaderContent}>
-        
-        <h1 
-          style={hasBackgroundImage ? { color: 'white' } : {}}
-        >
-          {title}
-        </h1>
-        
-        <p 
-          style={hasBackgroundImage ? { color: 'rgba(255,255,255,0.9)' } : {}}
-        >
-          {description}
-        </p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </div>
     </section>
   );

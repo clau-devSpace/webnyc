@@ -7,9 +7,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .pageHeaderSection::before {
@@ -24,6 +21,49 @@
     z-index: 1;
 }
 
+/* Contenedor para la imagen de fondo única */
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+/* Overlay para oscurecer la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    z-index: -1;
+}
+
+/* Estilos específicos para diferentes headers con Next Image */
+.backgroundImage {
+    z-index: -3;
+}
+
+.backgroundImage.headerContacto {
+    object-position: center;
+}
+
+.backgroundImage.headerInicio {
+    object-position: center top;
+}
+
+.backgroundImage.headerServicios {
+    object-fit: contain;
+    object-position: center;
+}
+
+.backgroundImage.headerNosotros {
+    object-position: center;
+}
+
 .pageHeaderContent {
     max-width: 800px;
     margin: 0 auto;
@@ -35,59 +75,25 @@
     animation: fadeInUp 1s ease-out;
 }
 
-.pageHeaderSection.withDoubleBg {
-    position: relative;
-}
-
-.headerBgLeft,
-.headerBgRight {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-}
-
-.headerBgLeft {
-    left: 0;
-}
-
-.headerBgRight {
-    right: 0;
-}
-
-.headerBgLeft::after,
-.headerBgRight::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.pageHeaderSection.withDoubleBg .pageHeaderContent {
+/* Estilos para texto blanco sobre imagen */
+.pageHeaderContent {
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.pageHeaderSection.withDoubleBg .pageBreadcrumbNav a {
+.pageBreadcrumbNav a {
     color: white;
 }
 
-.pageHeaderSection.withDoubleBg .pageBreadcrumbNav span {
+.pageBreadcrumbNav span {
     color: rgba(255,255,255,0.8);
 }
 
-.pageHeaderSection.withDoubleBg h1 {
+.pageHeaderSection h1 {
     color: white;
 }
 
-.pageHeaderSection.withDoubleBg p {
+.pageHeaderSection p {
     color: rgba(255,255,255,0.9);
 }
 
@@ -113,7 +119,7 @@
 .pageHeaderSection h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: white;
     margin-top: 2rem;
     margin-bottom: 0.6rem;
 }
@@ -127,29 +133,9 @@
 
 .pageHeaderSection p {
     font-size: 1.1rem;
-    color: #666;
+    color: rgba(255,255,255,0.9);
     line-height: 1.8;
     max-width: 600px;
-}
-
-.headerContacto {
-    background-size: cover;
-    background-position: center;
-}
-
-.headerInicio {
-    background-size: cover;
-    background-position: center top;
-}
-
-.headerServicios {
-    background-size: contain;
-    background-position: center;
-}
-
-.headerNosotros {
-    background-size: cover;
-    background-position: center;
 }
 
 @keyframes fadeInUp {
@@ -164,37 +150,21 @@
 }
 
 @media (max-width: 768px) {
-    .headerBgLeft,
-    .headerBgRight {
-        width: 100%;
-        height: 50%;
-    }
-    
-    .headerBgLeft {
-        top: 0;
-        bottom: 50%;
-    }
-    
-    .headerBgRight {
-        top: 50%;
-        bottom: 0;
-    }
-    
     .pageHeaderSection h1 {
         font-size: 2.2rem;
     }
     
-    .headerContacto {
-        background-position: 50% center;
+    .backgroundImage.headerContacto {
+        object-position: 50% center;
     }
     
-    .headerInicio {
-        background-position: center bottom;
+    .backgroundImage.headerInicio {
+        object-position: center bottom;
     }
     
-    .headerServicios {
-        background-size: cover;
-        background-position: center;
+    .backgroundImage.headerServicios {
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -203,12 +173,12 @@
         font-size: 1.8rem;
     }
     
-    .headerContacto {
-        background-position: 50% center;
-        background-size: cover;
+    .backgroundImage.headerContacto {
+        object-position: 50% center;
+        object-fit: cover;
     }
     
-    .headerInicio {
-        background-position: center bottom;
+    .backgroundImage.headerInicio {
+        object-position: center bottom;
     }
 }
