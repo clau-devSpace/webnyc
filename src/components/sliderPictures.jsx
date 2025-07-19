@@ -1,11 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Slider() {
   return (
-    <>
+    <div style={{ width: '100%', height: '500px' }}>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -19,19 +18,23 @@ export default function Slider() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="homeSwiper"
+        style={{ height: '100%' }}
       >
         <SwiperSlide>
           <div className="slider-image-container">
-            <Image 
+            <img 
               src='/images/edificio-oficina-nyc.png' 
               alt='Oficina/Edificio NYC'
-              fill
-              priority={true}
-              quality={85}
-              sizes="(max-width: 320px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
               style={{
+                width: '100%',
+                height: '100%',
                 objectFit: 'cover',
                 borderRadius: '8px'
+              }}
+              onError={(e) => {
+                console.error('Error loading image:', e.target.src);
+                // Mostrar placeholder si la imagen no carga
+                e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjM1MCIgeT0iMjAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5Ij5JbWFnZW4gbm8gZW5jb250cmFkYTwvdGV4dD48L3N2Zz4=';
               }}
             />
           </div>
@@ -39,16 +42,18 @@ export default function Slider() {
         
         <SwiperSlide>
           <div className="slider-image-container">
-            <Image 
+            <img 
               src='/images/oficina-nyc.jpeg' 
               alt='Oficinas NYC'
-              fill
-              loading="lazy"
-              quality={85}
-              sizes="(max-width: 320px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
               style={{
+                width: '100%',
+                height: '100%',
                 objectFit: 'cover',
                 borderRadius: '8px'
+              }}
+              onError={(e) => {
+                console.error('Error loading image:', e.target.src);
+                e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjM1MCIgeT0iMjAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5Ij5JbWFnZW4gbm8gZW5jb250cmFkYTwvdGV4dD48L3N2Zz4=';
               }}
             />
           </div>
@@ -56,16 +61,18 @@ export default function Slider() {
         
         <SwiperSlide>
           <div className="slider-image-container">
-            <Image 
+            <img 
               src='/images/garita-vigilancia.jpeg' 
               alt='Garita vigilancia'
-              fill
-              loading="lazy"
-              quality={85}
-              sizes="(max-width: 320px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
               style={{
+                width: '100%',
+                height: '100%',
                 objectFit: 'cover',
                 borderRadius: '8px'
+              }}
+              onError={(e) => {
+                console.error('Error loading image:', e.target.src);
+                e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjM1MCIgeT0iMjAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5Ij5JbWFnZW4gbm8gZW5jb250cmFkYTwvdGV4dD48L3N2Zz4=';
               }}
             />
           </div>
@@ -73,16 +80,18 @@ export default function Slider() {
         
         <SwiperSlide>
           <div className="slider-image-container">
-            <Image 
+            <img 
               src='/images/guardias.jpg' 
               alt='Vigilancia'
-              fill
-              loading="lazy"
-              quality={85}
-              sizes="(max-width: 320px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
               style={{
+                width: '100%',
+                height: '100%',
                 objectFit: 'cover',
                 borderRadius: '8px'
+              }}
+              onError={(e) => {
+                console.error('Error loading image:', e.target.src);
+                e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjM1MCIgeT0iMjAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5Ij5JbWFnZW4gbm8gZW5jb250cmFkYTwvdGV4dD48L3N2Zz4=';
               }}
             />
           </div>
@@ -92,16 +101,14 @@ export default function Slider() {
       <style jsx>{`
         .homeSwiper {
           width: 100%;
-          max-width: 100%;
+          height: 100%;
           overflow: hidden;
         }
 
         .slider-image-container {
           position: relative;
           width: 100%;
-          height: 50vh;
-          min-height: 250px;
-          max-height: 500px;
+          height: 100%;
           overflow: hidden;
         }
 
@@ -124,104 +131,7 @@ export default function Slider() {
         .homeSwiper :global(.swiper-button-prev::after) {
           font-size: 18px;
         }
-
-        @media (max-width: 768px) {
-          .slider-image-container {
-            height: 35vh;
-            min-height: 200px;
-            max-height: 350px;
-          }
-
-          .homeSwiper :global(.swiper-button-next),
-          .homeSwiper :global(.swiper-button-prev) {
-            width: 35px;
-            height: 35px;
-          }
-          
-          .homeSwiper :global(.swiper-button-next::after),
-          .homeSwiper :global(.swiper-button-prev::after) {
-            font-size: 16px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .slider-image-container {
-            height: 30vh;
-            min-height: 180px;
-            max-height: 280px;
-          }
-
-          .homeSwiper :global(.swiper-button-next),
-          .homeSwiper :global(.swiper-button-prev) {
-            display: none;
-          }
-          
-          .homeSwiper :global(.swiper-pagination) {
-            bottom: 10px;
-          }
-        }
-
-        @media (max-width: 360px) {
-          .slider-image-container {
-            height: 25vh;
-            min-height: 140px;
-            max-height: 230px;
-          }
-        }
-
-        @media (max-width: 320px) {
-          .homeSwiper {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-          }
-          
-          .slider-image-container {
-            height: 22vh;
-            min-height: 120px;
-            max-height: 200px;
-            width: 100%;
-          }
-
-          .homeSwiper :global(.swiper-button-next),
-          .homeSwiper :global(.swiper-button-prev) {
-            display: none;
-          }
-          
-          .homeSwiper :global(.swiper-pagination) {
-            bottom: 8px;
-          }
-          
-          .homeSwiper :global(.swiper-pagination-bullet) {
-            width: 6px;
-            height: 6px;
-            margin: 0 3px;
-          }
-
-        }
-        
-
-        @media (max-width: 280px) {
-          .slider-image-container {
-            height: 20vh;
-            min-height: 100px;
-            max-height: 180px;
-          }
-          
-          .homeSwiper :global(.swiper-pagination-bullet) {
-            width: 5px;
-            height: 5px;
-            margin: 0 2px;
-          }
-        }
-
-        @media (min-width: 1200px) {
-          .slider-image-container {
-            height: 60vh;
-            max-height: 600px;
-          }
-        }
       `}</style>
-    </>
+    </div>
   );
 }

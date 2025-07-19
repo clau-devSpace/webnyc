@@ -6,8 +6,11 @@ const nextConfig = {
   poweredByHeader: false,          
   
   images: {
-    domains: [
-      'nycseguridad.com.ar',           
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.nycseguridad.com.ar',
+      },
     ],
     
     formats: ['image/webp', 'image/avif'],

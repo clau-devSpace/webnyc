@@ -37,42 +37,48 @@ const Navbar = () => {
     setIsDropdownOpen(false);
 
     if (router.pathname === "/") {
+      // Si estamos en la página principal, hacer scroll directamente
       handleSmoothScroll(e, sectionId);
     } else {
-      // Función para hacer scroll después de que la navegación se complete
-      const handleRouteComplete = () => {
-        const element = document.getElementById(sectionId.replace("#", ""));
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-        // Remover el listener después de usarlo
-        router.events.off('routeChangeComplete', handleRouteComplete);
-      };
-
-      // Escuchar cuando la navegación se complete
-      router.events.on('routeChangeComplete', handleRouteComplete);
-      router.push("/");
+      // Si estamos en otra página, navegar y luego hacer scroll
+      router.push("/").then(() => {
+        // Usar setTimeout para asegurar que el DOM esté listo
+        setTimeout(() => {
+          const element = document.querySelector(sectionId);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 100);
+      });
     }
   };
 
-  // Limpiar listeners cuando el componente se desmonte
+  // Nueva función para manejar el click en "Servicios"
+  const handleServiciosClick = (e) => {
+    e.preventDefault();
+    // Solo toggle del dropdown en mobile
+    if (window.innerWidth <= 768) {
+      toggleDropdown();
+    }
+    // En desktop no hace nada, solo muestra el dropdown con hover
+  };
+
+  // Limpiar estado cuando cambia la ruta
   useEffect(() => {
-    return () => {
-      router.events.off('routeChangeComplete');
+    const handleRouteChange = () => {
+      setIsMenuOpen(false);
+      setIsDropdownOpen(false);
     };
-  }, []);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-    setIsDropdownOpen(false);
-  }, [router.pathname]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [router.pathname]);
+    router.events.on('routeChangeStart', handleRouteChange);
+    
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
@@ -117,14 +123,7 @@ const Navbar = () => {
           <li className={`${styles.navItem} ${styles.hasDropdown} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
             <a 
               href="#servicios" 
-              onClick={(e) => {
-                if (window.innerWidth > 768) {
-                  handleSectionNavigation(e, '#servicios');
-                } else {
-                  e.preventDefault();
-                  toggleDropdown();
-                }
-              }}
+              onClick={handleServiciosClick}
             >
               Servicios
             </a>
