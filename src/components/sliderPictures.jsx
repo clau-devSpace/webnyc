@@ -25,6 +25,7 @@ export default function Slider() {
             <img 
               src='/images/edificio-oficina-nyc.webp' 
               alt='Oficina/Edificio NYC'
+              loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
@@ -45,6 +46,7 @@ export default function Slider() {
             <img 
               src='/images/oficina-nyc.webp' 
               alt='Oficinas NYC'
+              loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
@@ -64,6 +66,7 @@ export default function Slider() {
             <img 
               src='/images/garita-vigilancia.webp' 
               alt='Garita vigilancia'
+              loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
@@ -83,6 +86,7 @@ export default function Slider() {
             <img 
               src='/images/guardias.webp' 
               alt='Vigilancia'
+              loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',

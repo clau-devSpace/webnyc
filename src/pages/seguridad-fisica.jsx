@@ -157,6 +157,7 @@ export default function SeguridadFisica(){
                     height={300}
                     className={styles.serviceImage}
                     sizes="(max-width: 768px) 100vw, 400px"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -197,6 +198,7 @@ export default function SeguridadFisica(){
                     height={300}
                     className={styles.serviceImage}
                     sizes="(max-width: 768px) 100vw, 400px"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -233,6 +235,7 @@ export default function SeguridadFisica(){
                     height={300}
                     className={styles.serviceImage}
                     sizes="(max-width: 768px) 100vw, 400px"
+                    loading="lazy"
                   />
                 </div>
               </div>

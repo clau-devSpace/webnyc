@@ -34,6 +34,7 @@ function Header({
         <Image
           src={backgroundImage}
           alt={imageAlt}
+          loading='lazy'
           fill
           style={{ objectFit: 'cover' }}
           priority={imagePriority}

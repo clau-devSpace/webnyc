@@ -63,10 +63,12 @@ export default function SliderCompanies() {
                   alt={logo.alt}
                   fill
                   className="logoEmpresa"
+                  loading="lazy"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                   style={{
                     objectFit: 'contain',
                     objectPosition: 'center'
+                    
                   }}
                 />
               </div>
@@ -82,6 +84,7 @@ export default function SliderCompanies() {
                   alt={logo.alt}
                   fill
                   className="logoEmpresa"
+                  loading="lazy"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                   style={{
                     objectFit: 'contain',

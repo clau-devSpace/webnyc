@@ -109,6 +109,7 @@ export default function SeguridadElectronica(){
                                             src="/images/dron-de-seguridad.webp"
                                             alt="Dron de seguridad"
                                             sizes="24px"
+                                            loading="lazy"
                                         />
                                     </span>
                                     <span className={styles.featureText}>Vigilancia Aérea con Drones</span>
@@ -149,6 +150,7 @@ export default function SeguridadElectronica(){
                                     height={300}
                                     className={styles.serviceImage}
                                     sizes="(max-width: 768px) 100vw, 400px"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -174,6 +176,7 @@ export default function SeguridadElectronica(){
                                     height={300}
                                     className={styles.serviceImage}
                                     sizes="(max-width: 768px) 100vw, 400px"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -203,6 +206,7 @@ export default function SeguridadElectronica(){
                                     height={300}
                                     className={`${styles.serviceImage} ${styles.totem}`}
                                     sizes="(max-width: 768px) 100vw, 400px"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -226,6 +230,7 @@ export default function SeguridadElectronica(){
                                     height={300}
                                     className={styles.serviceImage}
                                     sizes="(max-width: 768px) 100vw, 400px"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
