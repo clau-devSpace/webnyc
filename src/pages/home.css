@@ -43,6 +43,10 @@ body {
     background-position: center;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 .hero::after {
     content: '';
     position: absolute;
@@ -370,6 +374,7 @@ body {
     overflow: hidden;
     margin: 0 auto;
     width: 100%;
+    border-radius: 8px;
 }
 
 /*.homeSwiper.swiper {

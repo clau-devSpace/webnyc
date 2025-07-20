@@ -21,14 +21,14 @@ export default function Slider() {
         style={{ height: '100%' }}
       >
         <SwiperSlide>
-          <div className="slider-image-container">
+          <div className="slider-image-container special-img-class">
             <img 
-              src='/images/edificio-oficina-nyc.png' 
+              src='/images/edificio-oficina-nyc.webp' 
               alt='Oficina/Edificio NYC'
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -41,14 +41,14 @@ export default function Slider() {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="slider-image-container">
+          <div className="slider-image-container special-img-class">
             <img 
-              src='/images/oficina-nyc.jpeg' 
+              src='/images/oficina-nyc.webp' 
               alt='Oficinas NYC'
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -60,14 +60,14 @@ export default function Slider() {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="slider-image-container">
+          <div className="slider-image-container special-img-class">
             <img 
-              src='/images/garita-vigilancia.jpeg' 
+              src='/images/garita-vigilancia.webp' 
               alt='Garita vigilancia'
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -79,14 +79,14 @@ export default function Slider() {
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="slider-image-container">
+          <div className="slider-image-container special-img-class">
             <img 
-              src='/images/guardias.jpg' 
+              src='/images/guardias.webp' 
               alt='Vigilancia'
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -110,6 +110,10 @@ export default function Slider() {
           width: 100%;
           height: 100%;
           overflow: hidden;
+        }
+
+        .special-img-class{
+          border-radius: 8px;
         }
 
         .homeSwiper :global(.swiper-pagination-bullet) {

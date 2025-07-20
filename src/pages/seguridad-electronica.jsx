@@ -56,7 +56,7 @@ export default function SeguridadElectronica(){
                     content="Equipos de seguridad de alta tecnología con monitoreo remoto las 24 horas. Sistemas de alarmas inteligentes, cámaras IP y control de accesos biométrico."
                 />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="/images/control-biometrico.jpg" />
+                <meta property="og:image" content="/images/control-biometrico.webp" />
                 <link rel="canonical" href="https://nycseguridad.com.ar/seguridad-electronica" />
                 <script
                     type="application/ld+json"
@@ -106,7 +106,7 @@ export default function SeguridadElectronica(){
                                             className={styles.dron} 
                                             width={24}
                                             height={24}
-                                            src="/images/dron-de-seguridad.png"
+                                            src="/images/dron-de-seguridad.webp"
                                             alt="Dron de seguridad"
                                             sizes="24px"
                                         />
@@ -143,7 +143,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/alarma-seguridad.jpg" 
+                                    src="/images/alarma-seguridad.webp" 
                                     alt="Sistema de alarmas" 
                                     width={400}
                                     height={300}
@@ -168,7 +168,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/camara-seguridad.jpg" 
+                                    src="/images/camara-seguridad.webp" 
                                     alt="Cámaras de seguridad"
                                     width={400}
                                     height={300}
@@ -197,7 +197,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/totem-de-seguridad.png" 
+                                    src="/images/totem-de-seguridad.webp" 
                                     alt="Totem de Seguridad" 
                                     width={400}
                                     height={300}
@@ -220,7 +220,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/control-biometrico.jpg" 
+                                    src="/images/control-biometrico.webp" 
                                     alt="Control de accesos" 
                                     width={400}
                                     height={300}

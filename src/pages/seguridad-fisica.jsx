@@ -57,7 +57,7 @@ export default function SeguridadFisica(){
             content="Protección confiable con personal altamente capacitado y tecnología avanzada. Custodia y vigilancia profesional las 24 horas."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/images/guardias-camioneta.jpg" />
+          <meta property="og:image" content="/images/guardias-camioneta.webp" />
           <link rel="canonical" href="https://nycseguridad.com.ar/seguridad-fisica" />
           <script
             type="application/ld+json"
@@ -69,7 +69,7 @@ export default function SeguridadFisica(){
         <Header
           title="Seguridad Física"
           description="Protección confiable con personal altamente capacitado y tecnología avanzada. Custodia y vigilancia profesional las 24 horas del día, los 365 días del año."
-          backgroundImage="/images/guardias-camioneta.jpg"
+          backgroundImage="/images/guardias-camioneta.webp"
         />
 
         {/* Service Overview Section */}
@@ -151,7 +151,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/seguridad-fisica-1.jpeg"
+                    src="/images/seguridad-fisica-1.webp"
                     alt="Seguridad Corporativa, monitoreo"
                     width={400}
                     height={300}
@@ -191,7 +191,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/garita-vigilancia.jpeg"
+                    src="/images/garita-vigilancia.webp"
                     alt="Garita de Vigilancia en Barrios Cerrados"
                     width={400}
                     height={300}
@@ -227,7 +227,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/guardias.jpg"
+                    src="/images/guardias.webp"
                     alt="Guardias de seguridad y vigilancia"
                     width={400}
                     height={300}

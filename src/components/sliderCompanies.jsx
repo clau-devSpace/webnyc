@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function SliderCompanies() {
-  const [windowWidth, setWindowWidth] = useState(1024); // Valor inicial fijo
+  const [windowWidth, setWindowWidth] = useState(1024); 
   const [isClient, setIsClient] = useState(false);
   
   useEffect(() => {
-    // Marcar que estamos en el cliente
+
     setIsClient(true);
     
-    // Establecer el ancho real de la ventana
     setWindowWidth(window.innerWidth);
     
     const handleResize = () => {
@@ -22,13 +21,13 @@ export default function SliderCompanies() {
 
   const logos = [
     { src: '/images/novomet-logo.png', alt: "Novomet" },
-    { src: '/images/pecom_color_logotipo.svg', alt: "Pecom" },
-    { src: '/images/logoEnergiadelSur.png', alt: "Energia del Sur" },
-    { src: '/images/supercanal-logo.png', alt: "Supercanal S.A" },
-    { src: '/images/logo-crane.svg', alt: "Crane" },
-    { src: '/images/Ulterra-logo.jpeg', alt: "Ulterra" },
-    { src: '/images/Grupo Dragon_ Logo Negro.png', alt: "Grupo Dragon" },
-    { src: '/images/geovial.jpg', alt: "Geovial" }
+    { src: '/images/pecom_color_logotipo.webp', alt: "Pecom" },
+    { src: '/images/logoEnergiadelSur.webp', alt: "Energia del Sur" },
+    { src: '/images/supercanal-logo.webp', alt: "Supercanal S.A" },
+    { src: '/images/logo-crane.webp', alt: "Crane" },
+    { src: '/images/Ulterra-logo.webp', alt: "Ulterra" },
+    { src: '/images/Grupo Dragon_ Logo Negro.webp', alt: "Grupo Dragon" },
+    { src: '/images/geovial.webp', alt: "Geovial" }
   ];
 
   const getSlidesPerView = () => {
@@ -39,10 +38,9 @@ export default function SliderCompanies() {
   };
 
   const slidesPerView = getSlidesPerView();
-  
-  // Evitar el flash de contenido no renderizado
+
   if (!isClient) {
-    return <div style={{ height: '300px' }} />; // Placeholder mientras se hidrata
+    return <div style={{ height: '300px' }} />; 
   }
   
   return (

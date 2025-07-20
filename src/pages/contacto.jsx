@@ -14,7 +14,7 @@ export default function Contacto() {
       <Header
         title="Contacto"
         description="Contáctate con nosotros para recibir asesoramiento personalizado sobre nuestros servicios de seguridad. Nuestro equipo está disponible para responder todas tus consultas."
-        backgroundImage='/images/fondo-pantalla-principal.jpg'
+        backgroundImage='/images/fondo-pantalla-principal.webp'
         className={styles.estilosImagenContacto}
       />
 
