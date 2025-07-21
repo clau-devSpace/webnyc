@@ -20,7 +20,7 @@ const SecurePro = () => {
     "@context": "https://schema.org",
     "@type": "SecurityService",
     "name": "NYC Seguridad - Servicios de Seguridad Privada",
-    "description": "Empresa líder en seguridad privada en Comodoro Rivadavia con 23 años de experiencia. Ofrecemos seguridad física, electrónica e investigaciones profesionales.",
+    "description": "Empresa líder en seguridad privada con 23 años de experiencia. Ofrecemos seguridad física, electrónica e investigaciones profesionales.",
     "provider": {
       "@type": "Organization",
       "name": "NYC Seguridad",
@@ -133,21 +133,21 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
         <title>NYC Seguridad | Empresa de Seguridad Privada</title>
         <meta
           name="description"
-          content="Empresa líder en seguridad privada con 23 años de experiencia. Ofrecemos seguridad física, electrónica, investigaciones y monitoreo 24/7. Protección profesional para empresas e industrias."
+          content="NYC es una Empresa líder en seguridad privada con 23 años de experiencia. Ofrecemos seguridad física, electrónica, investigaciones y monitoreo 24/7. Protección profesional para empresas e industrias."
         />
         <meta
           name="keywords"
-          content="seguridad privada Comodoro Rivadavia, empresa seguridad Chubut, seguridad física, seguridad electrónica, investigaciones privadas, monitoreo 24/7, vigilancia, control accesos"
+          content="seguridad privada, empresa seguridad, seguridad física, seguridad electrónica, investigaciones privadas, monitoreo 24/7, vigilancia, control accesos"
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           property="og:title"
-          content="NYC Seguridad - Empresa de Seguridad Privada en Comodoro Rivadavia"
+          content="NYC Seguridad - Empresa de Seguridad Privada"
         />
         <meta
           property="og:description"
-          content="Empresa líder en seguridad privada con 23 años de experiencia. Seguridad física, electrónica, investigaciones y monitoreo 24/7 en Comodoro Rivadavia, Chubut."
+          content="Empresa líder en seguridad privada con 23 años de experiencia. Seguridad física, electrónica, investigaciones y monitoreo 24/7."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nycseguridad.com.ar" />
@@ -157,7 +157,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="NYC Seguridad - Empresa de Seguridad Privada" />
-        <meta name="twitter:description" content="Empresa líder en seguridad privada con 23 años de experiencia en Comodoro Rivadavia, Chubut." />
+        <meta name="twitter:description" content="Empresa líder en seguridad privada con 23 años de experiencia." />
         <meta name="twitter:image" content="https://nycseguridad.com.ar/images/fondo-pantalla-principal.jpg" />
         
         <link rel="canonical" href="https://nycseguridad.com.ar" />
@@ -177,7 +177,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
          backgroundImage: `url(${ImagenFondoNYC})`
       }}>
         <div className="hero-content">
-          <h1><span className='hidden'></span>NYC Seguridad Integral</h1>
+          <h1>Seguridad Integral</h1>
          {/*  <p className="hero-subtitle">Protección Profesional 24/7</p>*/}
           <p>En <strong>NYC</strong> Brindamos servicios de seguridad privada con los más altos estándares de calidad y profesionalismo.</p>
           <a href="#servicios" className="cta-boton" onClick={(e) => handleSmoothScroll(e, '#servicios')}>
