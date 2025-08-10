@@ -14,7 +14,7 @@ const CtaSection = () => {
         </h2>
         
         <p className={styles.ctaDescription}>
-          Con más de 23 años de experiencia, ofrecemos soluciones de seguridad 
+          En NYC, con más de 23 años de experiencia, ofrecemos soluciones de seguridad 
           personalizadas para empresas e industrias. Contáctanos para una consulta 
           gratuita.
         </p>

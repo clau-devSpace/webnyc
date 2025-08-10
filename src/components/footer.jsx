@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.flexItems}>
           <img
             className={styles.logoFooter}
-            src="/images/logotipo-colornuevo.png"
+            src="/images/nueva-letra.png"
             alt="logo NYC"
           />
           <div className={styles.redesSociales}>

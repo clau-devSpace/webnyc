@@ -96,6 +96,10 @@
   font-weight: 700;
 }
 
+.animate-item{
+  opacity: 0;
+}
+
 @media (max-width: 768px) {
   .ctaSection {
     padding: 3rem 1rem; 

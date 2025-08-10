@@ -42,6 +42,16 @@ export default function SliderCompanies() {
   if (!isClient) {
     return <div style={{ height: '300px' }} />; 
   }
+
+   const specialLogos = {
+      1:'logoEspecial2',
+      2:'logoEspecial',
+      3:'logoEspecial',
+      6:'logoEspecial',
+      4:'logoEspecial2',
+      5:'logoEspecial2',
+      7:'logoEspecial2'
+      }
   
   return (
     <>
@@ -57,7 +67,7 @@ export default function SliderCompanies() {
           
           {logos.map((logo, index) => (
             <div key={`first-${index}`} className="slideItem">
-              <div className={`logoContainer ${index === 2 ? 'logoEspecial' : ''}`}>
+              <div className={`logoContainer ${specialLogos[index] || ''}`}>
                 <Image 
                   src={logo.src} 
                   alt={logo.alt}
@@ -78,7 +88,7 @@ export default function SliderCompanies() {
          
           {logos.map((logo, index) => (
             <div key={`second-${index}`} className="slideItem">
-              <div className={`logoContainer ${index === 2 ? 'logoEspecial' : ''}`}>
+              <div className={`logoContainer ${specialLogos[index] || ''}`}>
                 <Image 
                   src={logo.src} 
                   alt={logo.alt}
@@ -148,6 +158,11 @@ export default function SliderCompanies() {
         .logoContainer.logoEspecial {
           max-width: 280px;
           height: 160px;
+        }
+
+        .logoContainer.logoEspecial2{
+          max-width: 180px;
+          height: 80px;
         }
 
         .slideItem:hover .logoContainer {
@@ -224,9 +239,9 @@ export default function SliderCompanies() {
             height: 110px;
           }
 
-          .logoContainer.logoEspecial {
-            max-width: 220px;
-            height: 130px;
+          .logoContainer.logoEspecial2{
+            max-width: 180px;
+            height: 90px;
           }
 
           .sliderTrack {
@@ -257,9 +272,9 @@ export default function SliderCompanies() {
             height: 75px;
           }
 
-          .logoContainer.logoEspecial {
-            max-width: 160px;
-            height: 95px;
+          .logoContainer.logoEspecial2 {
+            max-width: 150px;
+            height: 70px;
           }
 
           .sliderTrack {
@@ -290,9 +305,9 @@ export default function SliderCompanies() {
             height: 100px;
           }
 
-          .logoContainer.logoEspecial {
-            max-width: 200px;
-            height: 120px;
+          .logoContainer.logoEspecial2 {
+            max-width: 150px;
+            height: 70px;
           }
 
           .sliderTrack {

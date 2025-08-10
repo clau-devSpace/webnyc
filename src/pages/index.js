@@ -8,13 +8,16 @@ import Link from 'next/link';
 import Head from "next/head";
 import Slider from "../components/sliderPictures";
 import SliderCompanies from "../components/sliderCompanies";
+import { useAnimateOnScroll } from '@/hooks/animate';
 
 
 const SecurePro = () => {
   const statsRef = useRef(null);
   const [statsAnimated, setStatsAnimated] = useState(false);
 
-  const ImagenFondoNYC = "/images/fondo-pantalla-principal.jpg";
+  useAnimateOnScroll();
+
+  const ImagenFondoNYC = "/images/fondo-pantalla-principal.webp";
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -177,7 +180,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
          backgroundImage: `url(${ImagenFondoNYC})`
       }}>
         <div className="hero-content">
-          <h1>Seguridad Integral</h1>
+          <h1 className='animate-item'>Seguridad Integral</h1>
          {/*  <p className="hero-subtitle">Protección Profesional 24/7</p>*/}
           <p>En <strong>NYC</strong> Brindamos servicios de seguridad privada con los más altos estándares de calidad y profesionalismo.</p>
           <a href="#servicios" className="cta-boton" onClick={(e) => handleSmoothScroll(e, '#servicios')}>
@@ -188,32 +191,43 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
 
       {/* Services Section */}
       <section className="services" id="servicios">
-        <div className="container">
+        <div className="container container-tarjetas">
           <div className="section-title">
             <h2 className='nuestros-servicios'>Nuestros Servicios</h2>
-            {/*<p>Soluciones integrales de seguridad adaptadas a sus necesidades específicas</p>*/}
           </div>
-          <div className="services-grid">
+          <div className="services-grid animate-item" data-animation="animate__fadeInLeft">
             <div className="service-card">
+              <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                 <ShieldCheck size={40} />
               </div>
-              <h3>Seguridad Física</h3>
-              <p><Link href="/seguridad-fisica">Detalles</Link></p>
+              <h3>Seguridad <span className='letra-naranja'>F</span>ísica</h3>
+              <p>Servicios de Seguridad Física especializados según tus necesidades</p>
+              <div className='background-detalles'>
+              <p><Link className='detalles' href="/seguridad-fisica">Detalles</Link></p>
+              </div>
             </div>
              <div className="service-card">
+              <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                 <Camera size={40} />
               </div>
-              <h3>Seguridad Electrónica</h3>
-              <p><Link href="/seguridad-electronica">Detalles</Link></p>
+              <h3>Seguridad <span className='letra-naranja'>E</span>lectrónica</h3>
+              <p>Seguridad Electrónica con Tecnologías de calidad e innovadoras</p>
+              <div className='background-detalles'>
+               <p><Link className='detalles' href="/seguridad-electronica">Detalles</Link></p>
+              </div>
             </div>
             <div className="service-card">
+              <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                <Search size={40}/>
               </div>
-              <h3>Investigaciones</h3>
-              <p><Link href="/investigaciones">Detalles</Link></p>
+              <h3><span className='letra-naranja'>I</span>nvestigaciones</h3>
+              <p>Investigaciones adaptadas a diversas situaciones</p>
+              <div className='background-detalles'>
+              <p><Link className='detalles' href="/investigaciones">Detalles</Link></p>
+              </div>
             </div>
           </div>
         </div>
@@ -224,7 +238,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
         <div className="container">
           <div className="about-content">
             <div className="about-text">
-              <h2>Nosotros</h2>
+              <h2><span className='nyc-about'>Sobre </span>NYC</h2>
               <p>Con 23 años de experiencia en el sector de la seguridad, <strong>NYC es una empresa líder</strong> que se dedica a brindar soluciones integrales de protección a empresas e industrias.</p>
               <p>Nuestro equipo está formado por profesionales altamente capacitados y certificados, comprometidos con la excelencia en el servicio y la innovación constante en tecnologías de seguridad.</p>
               <div className="about-features">

@@ -29,8 +29,8 @@ export default function Slider() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
-                borderRadius: '8px'
+                objectFit: 'cover',
+                borderRadius: '5px'
               }}
               onError={(e) => {
                 console.error('Error loading image:', e.target.src);
@@ -50,7 +50,7 @@ export default function Slider() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
+                objectFit: 'cover',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -70,7 +70,7 @@ export default function Slider() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
+                objectFit: 'cover',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -90,7 +90,7 @@ export default function Slider() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
+                objectFit: 'cover',
                 borderRadius: '8px'
               }}
               onError={(e) => {
