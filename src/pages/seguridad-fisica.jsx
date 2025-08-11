@@ -32,6 +32,7 @@ export default function SeguridadFisica(){
             }
         }
     }
+
     return (
       <>
         <Head>
@@ -135,7 +136,7 @@ export default function SeguridadFisica(){
 
             <div className={styles.servicesClean}>
               {/* Servicio 1 - Seguridad Corporativa */}
-              <div className={styles.serviceRow}>
+              <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInLeft">
                 <div className={styles.serviceContent}>
                   <h4>Seguridad Corporativa de Alto Nivel</h4>
                   <p className={styles.serviceDescription}>
@@ -151,7 +152,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/seguridad-fisica-1.webp"
+                    src="/images/oficina-nyc.jpeg"
                     alt="Seguridad Corporativa, monitoreo"
                     width={400}
                     height={300}
@@ -163,7 +164,7 @@ export default function SeguridadFisica(){
               </div>
 
               {/* Servicio 2 - Barrios Cerrados */}
-              <div className={styles.serviceRow}>
+              <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInRight">
                 <div className={styles.serviceContent}>
                   <h4>
                     Protección integral para barrios cerrados y urbanizaciones
@@ -192,7 +193,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/garita-vigilancia.webp"
+                    src="/images/garita-vigilancia.jpeg"
                     alt="Garita de Vigilancia en Barrios Cerrados"
                     width={400}
                     height={300}
@@ -204,7 +205,7 @@ export default function SeguridadFisica(){
               </div>
 
               {/* Servicio 3 - Industria y Comercios */}
-              <div className={styles.serviceRow}>
+              <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInLeft">
                 <div className={styles.serviceContent}>
                   <h4>Soluciones para Empresas e Industrias</h4>
                   <p className={styles.serviceDescription}>
@@ -229,7 +230,7 @@ export default function SeguridadFisica(){
                 </div>
                 <div>
                   <Image
-                    src="/images/guardias.webp"
+                    src="/images/logo-campera.jpg"
                     alt="Guardias de seguridad y vigilancia"
                     width={400}
                     height={300}

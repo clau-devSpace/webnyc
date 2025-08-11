@@ -8,14 +8,10 @@ import Link from 'next/link';
 import Head from "next/head";
 import Slider from "../components/sliderPictures";
 import SliderCompanies from "../components/sliderCompanies";
-import { useAnimateOnScroll } from '@/hooks/animate';
-
 
 const SecurePro = () => {
   const statsRef = useRef(null);
   const [statsAnimated, setStatsAnimated] = useState(false);
-
-  useAnimateOnScroll();
 
   const ImagenFondoNYC = "/images/fondo-pantalla-principal.webp";
 
@@ -104,7 +100,6 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
     const currentValue = Math.floor(progress * (end - start) + start);
     
-    // Aplicar el símbolo como prefijo o sufijo según corresponda
     if (isPrefix) {
       element.textContent = symbol + currentValue;
     } else {
@@ -129,9 +124,9 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
     }
   };
 
+
   return (
    <>
-
     <Head>
         <title>NYC Seguridad | Empresa de Seguridad Privada</title>
         <meta
@@ -180,7 +175,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
          backgroundImage: `url(${ImagenFondoNYC})`
       }}>
         <div className="hero-content">
-          <h1 className='animate-item'>Seguridad Integral</h1>
+          <h1>Seguridad Integral</h1>
          {/*  <p className="hero-subtitle">Protección Profesional 24/7</p>*/}
           <p>En <strong>NYC</strong> Brindamos servicios de seguridad privada con los más altos estándares de calidad y profesionalismo.</p>
           <a href="#servicios" className="cta-boton" onClick={(e) => handleSmoothScroll(e, '#servicios')}>
@@ -195,8 +190,8 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
           <div className="section-title">
             <h2 className='nuestros-servicios'>Nuestros Servicios</h2>
           </div>
-          <div className="services-grid animate-item" data-animation="animate__fadeInLeft">
-            <div className="service-card">
+            <div className="services-grid">
+            <div className="service-card" style={{backgroundImage: "url(/images/patron4.jpg)"}}>
               <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                 <ShieldCheck size={40} />
@@ -207,7 +202,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
               <p><Link className='detalles' href="/seguridad-fisica">Detalles</Link></p>
               </div>
             </div>
-             <div className="service-card">
+             <div className="service-card" style={{backgroundImage: "url(/images/patron4.jpg)"}}>
               <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                 <Camera size={40} />
@@ -218,7 +213,7 @@ const animateValue = (element, start, end, duration, symbol = '', isPrefix = fal
                <p><Link className='detalles' href="/seguridad-electronica">Detalles</Link></p>
               </div>
             </div>
-            <div className="service-card">
+            <div className="service-card" style={{backgroundImage: "url(/images/patron4.jpg)"}}>
               <h2 className='h2-cards'>NYC</h2>
               <div className="service-icon">
                <Search size={40}/>

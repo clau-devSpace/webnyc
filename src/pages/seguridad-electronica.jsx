@@ -34,6 +34,7 @@ export default function SeguridadElectronica(){
         }
     }
 
+
     return(
         <>
             <Head>
@@ -98,7 +99,7 @@ export default function SeguridadElectronica(){
                                 </div>
                                 <div className={`${styles.featureItem} ${styles.specificItem}`}>
                                     <span className={styles.featureIcon}>🤖</span>
-                                    <span className={`${styles.featureText} ${styles.specificText}`}>Recorridas Programadas con Robots Autónomos</span>
+                                    <span className={`${styles.featureText} ${styles.specificText}`}>Recorridas Programadas con Robots</span>
                                 </div>
                                 <div className={styles.featureItem}>
                                     <span className={styles.featureIcon}>
@@ -130,7 +131,7 @@ export default function SeguridadElectronica(){
                     
                     <div className={styles.servicesClean}>
                         {/* Servicio 1 - Sistema de Alarmas */}
-                        <div className={styles.serviceRow}>
+                        <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInLeft">
                             <div className={styles.serviceContent}>
                                 <h4>Sistemas de Alarmas Inteligentes</h4>
                                 <p className={styles.serviceDescription}>Tecnología de última generación para la detección temprana de intrusos y protección integral de su propiedad.</p>
@@ -144,7 +145,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/alarma-seguridad.webp" 
+                                    src="/images/alarma-seguridad.jpg" 
                                     alt="Sistema de alarmas" 
                                     width={400}
                                     height={300}
@@ -156,7 +157,7 @@ export default function SeguridadElectronica(){
                         </div>
 
                         {/* Servicio 2 - Video Cámaras */}
-                        <div className={styles.serviceRow}>
+                        <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInRight">
                             <div className={styles.serviceContent}>
                                 <h4>Cámaras de Seguridad</h4>
                                 <p className={styles.serviceDescription}>Cámaras de seguridad IP y CCTV con acceso remoto para monitoreo continuo desde cualquier lugar del mundo.</p>
@@ -170,7 +171,7 @@ export default function SeguridadElectronica(){
                             </div>
                             <div>
                                 <Image 
-                                    src="/images/camara-seguridad.webp" 
+                                    src="/images/camara-seguridad.jpg" 
                                     alt="Cámaras de seguridad"
                                     width={400}
                                     height={300}
@@ -182,7 +183,7 @@ export default function SeguridadElectronica(){
                         </div>
 
                         {/* Servicio 3 - Control de Accesos */}
-                        <div className={styles.serviceRow}>
+                        <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInLeft">
                             <div className={styles.serviceContent}>
                                 <h4>Totem Vigilador Virtual</h4>
                                 <p className={styles.serviceDescription}>Nuestro Totem de Seguridad combina tecnologías avanzadas y un diseño robusto para brindar máxima seguridad. Características destacadas:</p>
@@ -211,7 +212,7 @@ export default function SeguridadElectronica(){
                             </div>
                         </div>
 
-                        <div className={styles.serviceRow}>
+                        <div className={`${styles.serviceRow} animate-item`} data-animation="animate__fadeInRight">
                             <div className={styles.serviceContent}>
                                 <h4>Control de Accesos Biométrico y Digital</h4>
                                 <p className={styles.serviceDescription}>Sistemas avanzados de control de acceso con múltiples métodos de identificación y software de gestión integral.</p>

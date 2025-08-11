@@ -94,7 +94,7 @@ const Navbar = () => {
     >
       <div className={styles.navContainer}>
         <a href="#" className={styles.logo}>
-          <img src='/images/nueva-letra.png' className={styles.logotipo} alt='logo'/>
+          <img src='/images/logo-logo-nyc.png' className={styles.logotipo} alt='logo'/>
         </a>
     
         <button 

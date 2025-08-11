@@ -113,7 +113,7 @@ export default function SliderCompanies() {
           align-items: center;
           text-align: center;
           justify-content: center;
-          padding-top: 4rem;
+          padding-top: 2rem;
           color: #2D2D2D;
         }
 
@@ -138,10 +138,10 @@ export default function SliderCompanies() {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 150px;
+          height: 120px;
           padding: 0 15px;
           box-sizing: border-box;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
         }
 
         .logoContainer {

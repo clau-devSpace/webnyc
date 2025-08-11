@@ -21,7 +21,14 @@ export default function Footer() {
                 aria-label="Síguenos en Instagram"
                 href="https://www.instagram.com/nyc.seguridadprivada/"
               ><Instagram className={styles.socialIcon} /></a>
-              <Facebook className={styles.socialIcon} />
+              <a
+               className="enlace-redes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Síguenos en Facebook"
+                href="https://www.facebook.com/nyc.seguridad/"
+              >
+              <Facebook className={styles.socialIcon} /></a>
             </div>
           </div>
         </div>

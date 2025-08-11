@@ -107,14 +107,16 @@
 .servicesClean {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 5rem;
 }
+
 
 .serviceRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
+    --animate-duration: 2s;
 }
 
 .serviceRow:nth-child(even) {
@@ -324,6 +326,7 @@
     
     .serviceRow {
         text-align: center;
+        gap: 1.5rem;
     }
     
     .serviceContent h4 {

@@ -23,13 +23,13 @@ export default function Slider() {
         <SwiperSlide>
           <div className="slider-image-container special-img-class">
             <img 
-              src='/images/edificio-oficina-nyc.webp' 
+              src='/images/edificio-oficina-nyc.png' 
               alt='Oficina/Edificio NYC'
               loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '5px'
               }}
               onError={(e) => {
@@ -44,13 +44,13 @@ export default function Slider() {
         <SwiperSlide>
           <div className="slider-image-container special-img-class">
             <img 
-              src='/images/oficina-nyc.webp' 
+              src='/images/camioneta-nueva-nyc.jpeg' 
               alt='Oficinas NYC'
               loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -64,13 +64,13 @@ export default function Slider() {
         <SwiperSlide>
           <div className="slider-image-container special-img-class">
             <img 
-              src='/images/garita-vigilancia.webp' 
+              src='/images/garita-vigilancia.jpeg' 
               alt='Garita vigilancia'
               loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
@@ -84,13 +84,13 @@ export default function Slider() {
         <SwiperSlide>
           <div className="slider-image-container special-img-class">
             <img 
-              src='/images/guardias.webp' 
+              src='/images/oficina-nyc-2.jpeg'
               alt='Vigilancia'
               loading="lazy"
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 borderRadius: '8px'
               }}
               onError={(e) => {
